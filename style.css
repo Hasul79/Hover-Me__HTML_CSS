@@ -24,4 +24,23 @@ body{
     border-radius: 20px;
     padding:10px 20px;
     white-space: nowrap;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+}
+#tooltip-info::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    border: 20px solid; 
+    transform: translateX(-50%);
+    border-color: #000 #0000 #0000 #0000;
+}
+#tooltip:hover #tooltip-info {
+    visibility: visible;
+    opacity: 1;
 }
